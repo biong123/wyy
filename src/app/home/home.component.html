@@ -1,0 +1,31 @@
+<nz-layout>
+    <nz-header>
+      <div class="logo"></div>
+      <nz-input-group [nzSuffix]="suffixIconSearch" style="float: left; width: 400px;">
+        <input type="text" nz-input placeholder="input search text" />
+      </nz-input-group>
+      <ng-template #suffixIconSearch>
+        <i nz-icon nzType="search"></i>
+      </ng-template>
+     
+      <ul nz-menu nzTheme="dark" nzMode="horizontal">
+        <li nz-menu-item>nav 1</li>
+        <li nz-menu-item>nav 2</li>
+        <li nz-menu-item>nav 3</li>
+      </ul>
+    </nz-header>
+    <nz-content>
+      <nz-breadcrumb>
+        <nz-breadcrumb-item>Home</nz-breadcrumb-item>
+        <nz-breadcrumb-item>List</nz-breadcrumb-item>
+        <nz-breadcrumb-item>App</nz-breadcrumb-item>
+      </nz-breadcrumb>
+      <nz-carousel nzAutoPlay>
+        <div nz-carousel-content *ngFor="let index of array">
+          <h3>{{ index }}</h3>
+        </div>
+      </nz-carousel>
+      <div class="inner-content">Content</div>
+    </nz-content>
+    <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
+  </nz-layout>
